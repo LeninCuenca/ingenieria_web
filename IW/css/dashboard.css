@@ -1,0 +1,99 @@
+/* Estilos del sidebar */
+.sidebar {
+    background-color: #9DD1C8;
+    color: black;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+  }
+  
+  .sidebar h2,
+  .sidebar p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  .sidebar p {
+    font-size: 0.9em;
+    color: #000000;
+  }
+  
+  .sidebar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .sidebar .logout {
+    margin-top: 30px;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+  }
+  
+  .sidebar a:hover {
+    background-color: #00796b;
+  }
+  
+  /* Estilos del contenido principal */
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  .navbar {
+    background-color: #009688;
+  }
+  
+  .navbar input {
+    width: 30%;
+  }
+  
+  /* Estilos de las tarjetas */
+  .card {
+    margin: 10px 0;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+  }
+  
+  .btn-logout {
+    background-color: #f44336;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .patient-card {
+    margin: 10px 0;
+  }
+  
+  .doctor-info,
+  .nurse-info {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+  }
+  
+  /* Estilos para el mensaje emergente */
+  .alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+  }

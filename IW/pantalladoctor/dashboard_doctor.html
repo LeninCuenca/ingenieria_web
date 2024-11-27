@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Doctor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Logo -->
+    <img src="/imagen/logo.png" alt="Logo" class="img-fluid">
+    <h2>Dashboard</h2>
+    <!-- Opciones del menú -->
+    <a href="#" id="inicio-btn">Inicio</a>
+    <a href="#" id="historia-clinica-btn">Gestion de Historias</a>
+    <a href="#" id="registro-paciente-btn">Registro de Paciente</a>
+    <!-- Información del Doctor en la parte inferior -->
+    <div class="doctor-info">
+      <img src="/imagen/doctor.png" alt="Doctor" class="img-fluid">
+      <p>Dr. Juan Perez</p>
+      <p>Cirujano Especialista</p>
+      <p>Doc123@Clinicasanjose.Com</p>
+      <button class="btn btn-danger btn-logout" id="cerrar-sesion">Cerrar Sesión</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content" id="main-content">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <input type="text" class="form-control" placeholder="Buscar paciente">
+      </div>
+    </nav>
+
+    <!-- Contenido de la vista de "Inicio" -->
+    <div id="inicio-content">
+      <h3>Historias Clínicas</h3>
+      <div class="row">
+        <!-- Ejemplo de tarjeta de paciente -->
+        <div class="col-md-4 patient-card">
+          <div class="card">
+            <div class="card-body">
+              <img src="/imagen/doctor.png" alt="Imagen del paciente" class="card-img-top">
+              <h5 class="card-title">Dr. Juan Perez</h5>
+              <p class="card-text">Paciente Refiera Dolor Abdominal Que Inició Hace 24 Horas, Localizado En El Cuadrante
+                Superior Derecho, De Intensidad Progresiva Y Acompañado De Náuseas Y Fiebre. No Refiera Vómitos Ni
+                Cambios En El Hábito Intestinal.</p>
+              <button class="btn btn-success">Ver</button>
+              <button class="btn btn-warning">Modificar</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 patient-card">
+          <div class="card">
+            <div class="card-body">
+              <img src="/imagen/doctor.png" alt="Imagen del paciente" class="card-img-top">
+              <h5 class="card-title">Dr. Juan Perez</h5>
+              <p class="card-text">Paciente Refiera Dolor Abdominal Que Inició Hace 24 Horas, Localizado En El Cuadrante
+                Superior Derecho, De Intensidad Progresiva Y Acompañado De Náuseas Y Fiebre. No Refiera Vómitos Ni
+                Cambios En El Hábito Intestinal.</p>
+              <button class="btn btn-success">Ver</button>
+              <button class="btn btn-warning">Modificar</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 patient-card">
+          <div class="card">
+            <div class="card-body">
+              <img src="/imagen/doctor.png" alt="Imagen del paciente" class="card-img-top">
+              <h5 class="card-title">Dr. Juan Perez</h5>
+              <p class="card-text">Paciente Refiera Dolor Abdominal Que Inició Hace 24 Horas, Localizado En El Cuadrante
+                Superior Derecho, De Intensidad Progresiva Y Acompañado De Náuseas Y Fiebre. No Refiera Vómitos Ni
+                Cambios En El Hábito Intestinal.</p>
+              <button class="btn btn-success">Ver</button>
+              <button class="btn btn-warning">Modificar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido de la vista de "Registro de Paciente" -->
+    <div id="registro-paciente-content" style="display:none;">
+      <h3>Registro de Paciente</h3>
+      <!-- Aquí puedes agregar los campos de registro para un nuevo paciente -->
+      <form id="form-registro" action="#" method="post" onsubmit="return validarFormulario()">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre del paciente" required>
+        </div>
+        <div class="mb-3">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" placeholder="Apellido del paciente" required>
+        </div>
+        <div class="mb-3">
+          <label for="cedula" class="form-label">Cédula</label>
+          <input type="text" class="form-control" id="cedula" placeholder="Cédula del paciente" required>
+        </div>
+        <div class="mb-3">
+          <label for="fecha-nacimiento" class="form-label">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" id="fecha-nacimiento" required>
+        </div>
+        <div class="mb-3">
+          <label for="sexo" class="form-label">Sexo</label>
+          <select class="form-control" id="sexo" required>
+            <option value="">Seleccionar</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input type="text" class="form-control" id="direccion" placeholder="Dirección del paciente" required>
+        </div>
+        <div class="mb-3">
+          <label for="antecedentes-medicos" class="form-label">Antecedentes Médicos</label>
+          <textarea class="form-control" id="antecedentes-medicos" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

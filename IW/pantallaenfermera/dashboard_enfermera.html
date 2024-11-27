@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Enfermera</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Logo -->
+    <img src="/imagen/logo.png" alt="Logo" class="img-fluid">
+    <h2>Dashboard</h2>
+    <!-- Opciones del menú -->
+    <a href="#">Inicio</a>
+    <a href="#">Gestión de Pacientes</a>
+    <a href="#">Administrar Medicamentos</a>
+    <!-- Información de la Enfermera en la parte inferior -->
+    <div class="nurse-info">
+      <img src="/imagen/enfermera.png" alt="Enfermera" class="img-fluid">
+      <p>Enfermera María López</p>
+      <p>Enfermera General</p>
+      <p>EnfermeraMaria@Clinicasanjose.Com</p>
+      <button class="btn btn-danger btn-logout" id="cerrar-sesion">Cerrar Sesión</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <input type="text" class="form-control" placeholder="Buscar paciente">
+      </div>
+    </nav>
+
+    <h3>Gestión de Pacientes</h3>
+    <div class="row">
+      <!-- Ejemplo de tarjeta de paciente -->
+      <div class="col-md-4 patient-card">
+        <div class="card">
+          <div class="card-body">
+            <!-- Aquí va la imagen -->
+            <img src="/imagen/paciente.png" alt="Imagen del paciente" class="card-img-top">
+            <h5 class="card-title">Juan Pérez</h5>
+            <p class="card-text">Paciente Refiera Dolor Abdominal Que Inició Hace 24 Horas, Localizado En El Cuadrante
+              Superior Derecho, De Intensidad Progresiva Y Acompañado De Náuseas Y Fiebre. No Refiera Vómitos Ni Cambios
+              En El Hábito Intestinal.</p>
+            <button class="btn btn-success">Ver Detalles</button>
+            <button class="btn btn-warning">Modificar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repetir las tarjetas de pacientes -->
+      <div class="col-md-4 patient-card">
+        <div class="card">
+          <div class="card-body">
+            <img src="/imagen/paciente.png" alt="Imagen del paciente" class="card-img-top">
+            <h5 class="card-title">Ana López</h5>
+            <p class="card-text">Paciente Refiera Dolor Abdominal Que Inició Hace 24 Horas, Localizado En El Cuadrante
+              Superior Derecho, De Intensidad Progresiva Y Acompañado De Náuseas Y Fiebre. No Refiera Vómitos Ni Cambios
+              En El Hábito Intestinal.</p>
+            <button class="btn btn-success">Ver Detalles</button>
+            <button class="btn btn-warning">Modificar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 patient-card">
+        <div class="card">
+          <div class="card-body">
+            <img src="/imagen/paciente.png" alt="Imagen del paciente" class="card-img-top">
+            <h5 class="card-title">Carlos García</h5>
+            <p class="card-text">Paciente Refiera Dolor Abdominal Que Inició Hace 24 Horas, Localizado En El Cuadrante
+              Superior Derecho, De Intensidad Progresiva Y Acompañado De Náuseas Y Fiebre. No Refiera Vómitos Ni Cambios
+              En El Hábito Intestinal.</p>
+            <button class="btn btn-success">Ver Detalles</button>
+            <button class="btn btn-warning">Modificar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agregar más tarjetas si es necesario -->
+    </div>
+  </div>
+
+  <!-- Bootstrap JS y dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
